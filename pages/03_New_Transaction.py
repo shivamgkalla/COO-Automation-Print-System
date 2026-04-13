@@ -176,13 +176,13 @@ if st.button("Generate Overlay PDF", type="primary"):
             mime="application/pdf",
         )
 
-        # Virtual print preview — requires poppler (available locally, not on Render free tier)
+        # Virtual print preview — uses PyMuPDF (no system dependencies)
         st.divider()
         st.subheader("Virtual Print Preview")
         try:
             import numpy as np
             from PIL import Image
-            from pdf2image import convert_from_path
+            import fitz  # PyMuPDF
             from pathlib import Path
 
             blank_path = Path(__file__).parent.parent / "SRS_Docs" / "alex dft sample.pdf"
@@ -190,13 +190,20 @@ if st.button("Generate Overlay PDF", type="primary"):
                 st.info("Reference blank form not found — preview unavailable. Download the PDF above and check it manually.")
             else:
                 with st.spinner("Generating preview..."):
-                    blank   = convert_from_path(str(blank_path), dpi=120)[0].convert("RGB")
-                    overlay = convert_from_path(str(out_path),   dpi=120)[0].convert("RGB")
+                    def pdf_to_image(path: str, dpi: int = 120) -> Image.Image:
+                        doc = fitz.open(path)
+                        page = doc[0]
+                        mat = fitz.Matrix(dpi / 72, dpi / 72)
+                        pix = page.get_pixmap(matrix=mat, alpha=False)
+                        return Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+
+                    blank   = pdf_to_image(str(blank_path))
+                    overlay = pdf_to_image(str(out_path))
                     overlay = overlay.resize(blank.size, Image.LANCZOS)
                     composite = Image.fromarray(np.minimum(np.array(blank), np.array(overlay)))
                 st.image(composite, caption="Virtual print — text overlaid on blank form", use_container_width=True)
         except Exception as prev_err:
-            st.info(f"Preview not available in this environment (poppler not installed): download the PDF above to inspect it.")
+            st.info(f"Preview unavailable: {prev_err}")
 
     except Exception as e:
         st.error(f"Failed to generate PDF: {e}")

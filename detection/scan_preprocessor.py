@@ -74,11 +74,15 @@ def _load_image(source: Path) -> np.ndarray:
 
 def _pdf_first_page(path: Path) -> np.ndarray:
     try:
-        from pdf2image import convert_from_path
+        import fitz  # PyMuPDF — no system dependencies required
     except ImportError:
-        raise ImportError("pdf2image is required to process PDF scans: pip install pdf2image")
-    pages = convert_from_path(str(path), dpi=SCAN_DPI, first_page=1, last_page=1)
-    pil_img = pages[0].convert("RGB")
+        raise ImportError("pymupdf is required to process PDF scans: pip install pymupdf")
+    doc = fitz.open(str(path))
+    page = doc[0]
+    mat = fitz.Matrix(SCAN_DPI / 72, SCAN_DPI / 72)
+    pix = page.get_pixmap(matrix=mat, alpha=False)
+    from PIL import Image
+    pil_img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
     return cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR)
 
 
