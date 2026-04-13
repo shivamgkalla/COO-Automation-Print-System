@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: coo-prefill-system
+    runtime: python
+    buildCommand: |
+      apt-get update && apt-get install -y poppler-utils libglib2.0-0 libsm6 libxrender1 libxext6 && pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    disk:
+      name: coo-output
+      mountPath: /app/output
+      sizeGB: 1

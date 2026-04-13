@@ -1,0 +1,246 @@
+{
+  "template_id": "gacc_coo_default",
+  "name": "GACC COO Standard Form (Gambia → China)",
+  "scan_filename": "",
+  "scan_dpi": 300,
+  "scan_width_px": 2484,
+  "scan_height_px": 3509,
+  "page_width_pt": 596.0,
+  "page_height_pt": 842.0,
+  "version": 2,
+  "deprecated": false,
+  "fields": [
+    {
+      "field_id": "cert_no",
+      "label": "Certificate No.",
+      "scan_bbox": [1518, 108, 752, 52],
+      "pdf_bbox": [364.2, 803.6, 180.4, 12.5],
+      "font_name": "Courier-Bold",
+      "font_size": 9.0,
+      "max_chars_per_line": 25,
+      "max_lines": 1,
+      "blank_always": false,
+      "is_table_column": false
+    },
+    {
+      "field_id": "field_1_exporter",
+      "label": "1. Exporter's name and address",
+      "scan_bbox": [130, 252, 1060, 148],
+      "pdf_bbox": [31.2, 745.9, 254.3, 35.5],
+      "font_name": "Courier",
+      "font_size": 8.0,
+      "max_chars_per_line": 44,
+      "max_lines": 5,
+      "blank_always": false,
+      "is_table_column": false
+    },
+    {
+      "field_id": "field_2_producer",
+      "label": "2. Producer's name and address",
+      "scan_bbox": [130, 460, 1060, 162],
+      "pdf_bbox": [31.2, 693.1, 254.3, 38.9],
+      "font_name": "Courier",
+      "font_size": 8.0,
+      "max_chars_per_line": 44,
+      "max_lines": 5,
+      "blank_always": false,
+      "is_table_column": false
+    },
+    {
+      "field_id": "field_3_consignee",
+      "label": "3. Consignee's name and address",
+      "scan_bbox": [130, 685, 1060, 165],
+      "pdf_bbox": [31.2, 638.2, 254.3, 39.6],
+      "font_name": "Courier",
+      "font_size": 8.0,
+      "max_chars_per_line": 44,
+      "max_lines": 5,
+      "blank_always": false,
+      "is_table_column": false
+    },
+    {
+      "field_id": "issued_in",
+      "label": "Issued in (country)",
+      "scan_bbox": [1409, 658, 820, 52],
+      "pdf_bbox": [338.0, 671.8, 196.7, 12.5],
+      "font_name": "Courier",
+      "font_size": 8.5,
+      "max_chars_per_line": 25,
+      "max_lines": 1,
+      "blank_always": false,
+      "is_table_column": false
+    },
+    {
+      "field_id": "field_4_means",
+      "label": "Means of transport (e.g. BY SEA)",
+      "scan_bbox": [440, 1038, 140, 52],
+      "pdf_bbox": [105.6, 580.1, 33.6, 12.5],
+      "font_name": "Courier",
+      "font_size": 8.0,
+      "max_chars_per_line": 8,
+      "max_lines": 1,
+      "blank_always": false,
+      "is_table_column": false
+    },
+    {
+      "field_id": "field_4_date",
+      "label": "Departure Date",
+      "scan_bbox": [582, 1038, 380, 52],
+      "pdf_bbox": [139.6, 580.1, 91.2, 12.5],
+      "font_name": "Courier",
+      "font_size": 8.0,
+      "max_chars_per_line": 12,
+      "max_lines": 1,
+      "blank_always": false,
+      "is_table_column": false
+    },
+    {
+      "field_id": "field_4_vessel",
+      "label": "Vessel/Flight/Train/Vehicle No.",
+      "scan_bbox": [600, 1124, 590, 52],
+      "pdf_bbox": [143.9, 559.4, 141.5, 12.5],
+      "font_name": "Courier",
+      "font_size": 8.0,
+      "max_chars_per_line": 30,
+      "max_lines": 1,
+      "blank_always": false,
+      "is_table_column": false
+    },
+    {
+      "field_id": "field_4_pol",
+      "label": "Port of loading",
+      "scan_bbox": [449, 1198, 740, 47],
+      "pdf_bbox": [107.7, 543.3, 177.5, 11.3],
+      "font_name": "Courier",
+      "font_size": 8.0,
+      "max_chars_per_line": 25,
+      "max_lines": 1,
+      "blank_always": false,
+      "is_table_column": false
+    },
+    {
+      "field_id": "field_4_pod",
+      "label": "Port of discharge",
+      "scan_bbox": [488, 1278, 700, 50],
+      "pdf_bbox": [117.1, 523.1, 167.9, 12.0],
+      "font_name": "Courier",
+      "font_size": 8.0,
+      "max_chars_per_line": 25,
+      "max_lines": 1,
+      "blank_always": false,
+      "is_table_column": false
+    },
+    {
+      "field_id": "field_5_remarks",
+      "label": "5. Remarks",
+      "scan_bbox": [1210, 808, 1055, 512],
+      "pdf_bbox": [290.3, 525.3, 253.1, 122.9],
+      "font_name": "Courier",
+      "font_size": 8.0,
+      "max_chars_per_line": 35,
+      "max_lines": 5,
+      "blank_always": false,
+      "is_table_column": false
+    },
+    {
+      "field_id": "field_13_country",
+      "label": "Declaration country (field 13 dotted line)",
+      "scan_bbox": [130, 2700, 870, 50],
+      "pdf_bbox": [31.2, 183.2, 208.7, 12.0],
+      "font_name": "Courier",
+      "font_size": 8.0,
+      "max_chars_per_line": 30,
+      "max_lines": 1,
+      "blank_always": false,
+      "is_table_column": false
+    },
+    {
+      "field_id": "page_total",
+      "label": "Page total (after 'Page 1 of')",
+      "scan_bbox": [2200, 3400, 130, 55],
+      "pdf_bbox": [527.8, 13.0, 31.2, 13.2],
+      "font_name": "Courier",
+      "font_size": 8.0,
+      "max_chars_per_line": 5,
+      "max_lines": 1,
+      "blank_always": false,
+      "is_table_column": false
+    }
+  ],
+  "table_layout": {
+    "first_data_row_y_pt": 455.8,
+    "row_height_pt": 60.0,
+    "columns": [
+      {
+        "field_id": "item_number",
+        "label": "Item No.",
+        "x_pt": 30.0,
+        "width_pt": 33.6,
+        "font_name": "Courier",
+        "font_size": 7.5,
+        "max_chars_per_line": 3,
+        "align": "center"
+      },
+      {
+        "field_id": "marks_packages",
+        "label": "Marks & Packages No.",
+        "x_pt": 63.6,
+        "width_pt": 69.1,
+        "font_name": "Courier",
+        "font_size": 7.0,
+        "max_chars_per_line": 12,
+        "align": "left"
+      },
+      {
+        "field_id": "description",
+        "label": "Description of goods",
+        "x_pt": 132.7,
+        "width_pt": 155.0,
+        "font_name": "Courier",
+        "font_size": 7.5,
+        "max_chars_per_line": 24,
+        "align": "left"
+      },
+      {
+        "field_id": "hs_code",
+        "label": "HS Code",
+        "x_pt": 287.7,
+        "width_pt": 58.8,
+        "font_name": "Courier",
+        "font_size": 7.5,
+        "max_chars_per_line": 11,
+        "align": "center"
+      },
+      {
+        "field_id": "origin_criterion",
+        "label": "Origin criterion",
+        "x_pt": 346.5,
+        "width_pt": 63.3,
+        "font_name": "Courier",
+        "font_size": 7.5,
+        "max_chars_per_line": 8,
+        "align": "center"
+      },
+      {
+        "field_id": "net_weight",
+        "label": "Net weight / Quantity",
+        "x_pt": 409.8,
+        "width_pt": 64.8,
+        "font_name": "Courier",
+        "font_size": 7.0,
+        "max_chars_per_line": 14,
+        "align": "left"
+      },
+      {
+        "field_id": "invoice_ref",
+        "label": "Invoice No./Date/Value",
+        "x_pt": 474.6,
+        "width_pt": 69.6,
+        "font_name": "Courier",
+        "font_size": 7.0,
+        "max_chars_per_line": 14,
+        "align": "left"
+      }
+    ]
+  }
+}

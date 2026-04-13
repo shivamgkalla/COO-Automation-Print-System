@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Generated output — downloaded by users, not committed
+output/*.pdf
+output/*.png
+
+# Scans — large image files, not committed
+scans/*.png
+scans/*.jpg
+scans/*.tiff
+scans/*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Videos and local docs
+*.mp4
+SRS_Docs/
+COO_draft_*.pdf
+ui/
