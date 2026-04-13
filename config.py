@@ -4,7 +4,11 @@ BASE_DIR = Path(__file__).parent
 
 TEMPLATES_DIR = BASE_DIR / "templates"
 SCANS_DIR = BASE_DIR / "scans"
-OUTPUT_DIR = BASE_DIR / "output"
+# On Render free tier (and any read-only filesystem), use /tmp for generated PDFs.
+# Locally, use the output/ folder inside the project.
+import os
+_local_output = BASE_DIR / "output"
+OUTPUT_DIR = _local_output if _local_output.exists() and os.access(_local_output, os.W_OK) else Path("/tmp/coo_output")
 
 # A4 dimensions in ReportLab points (1 pt = 1/72 inch)
 A4_WIDTH_PT = 595.28
