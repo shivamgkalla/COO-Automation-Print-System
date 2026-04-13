@@ -29,6 +29,8 @@ Thumbs.db
 
 # Videos and local docs
 *.mp4
-SRS_Docs/
+SRS_Docs/*.pdf
+!SRS_Docs/alex dft sample.pdf
+SRS_Docs/*.docx
 COO_draft_*.pdf
 ui/
